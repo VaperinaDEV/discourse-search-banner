@@ -37,7 +37,7 @@ export default apiInitializer("0.8", (api) => {
     },
     clickOutside() {
       if (!this.vnode.hooks["widget-mouse-down-outside"]) {
-        return this.clickOutside();
+        return this.mouseDownOutside();
       }
     },
     clickOutside() {
