@@ -16,9 +16,6 @@ $max-width: 600px;
   padding: 1.5em 1em;
   margin: 2em auto 1em auto;
   border-radius: 8px;
-  @include breakpoint(tablet) {
-    margin-top: 0.5em;
-  }
 
   > div {
     margin: 0 auto;
@@ -59,9 +56,6 @@ $max-width: 600px;
   h1 {
     font-size: var(--font-up-6);
     line-height: $line-height-medium;
-    @include breakpoint(tablet) {
-      font-size: var(--font-up-4);
-    }
   }
 
   h1,
@@ -120,9 +114,6 @@ $max-width: 600px;
     top: 1.9em;
     right: 0;
     padding: 2em 1em 1em 1em;
-    @include breakpoint(mobile-extra-large) {
-      width: 100%;
-    }
     ul,
     ol {
       list-style-type: none;
