@@ -8,10 +8,9 @@ show_on:
   description: top_menu refers to the <a href="/admin/site_settings/category/all_results?filter=top_menu">top menu site setting</a>
 
 plugin_outlet:
-  default: "above-main-container"
+  default: "discovery-list-container-top"
   type: enum
   choices:
-    - above-main-container
     - discovery-list-container-top
 
 background_image:
