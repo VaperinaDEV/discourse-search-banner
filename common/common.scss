@@ -1,7 +1,3 @@
-@import "common/foundation/mixins";
-
-$max-width: 600px;
-
 .custom-search-banner-wrap {
   background: var(--secondary);
   border: 1px solid var(--primary-low);
@@ -80,7 +76,7 @@ $max-width: 600px;
   .search-context,
   .results {
     margin: 0 auto;
-    max-width: $max-width;
+    max-width: 600px;
   }
 
   .search-context {
