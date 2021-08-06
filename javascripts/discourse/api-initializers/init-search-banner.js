@@ -3,9 +3,7 @@ import { apiInitializer } from "discourse/lib/api";
 export default apiInitializer("0.8", (api) => {
   const enableConnectorName = settings.plugin_outlet;
   const disableConnectorName =
-    enableConnectorName === "above-main-container"
-      ? "discovery-list-container-top"
-      : "above-main-container";
+    enableConnectorName === "discovery-list-container-top";
 
   api.registerConnectorClass(disableConnectorName, "search-banner", {
     shouldRender() {
