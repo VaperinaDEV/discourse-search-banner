@@ -9,21 +9,13 @@ $max-width: 600px;
 }
 
 .custom-search-banner-wrap {
-  @if $background-image != "none" {
-    background-image: url($background-image);
-  } @else {
-    background: none;
-  }
-  @if $tile-background_image == "true" {
-    background-size: auto;
-  } @else {
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+  background: var(--secondary);
+  border: 1px solid var(--primary-low);
   box-sizing: border-box;
   position: relative;
-  padding: 2.5em 0 3em;
+  padding: 1.5em 1em;
   margin: 1em auto;
+  border-radius: 8px;
   @include breakpoint(tablet) {
     padding: 1em 8px 2em;
     margin-top: 0.5em;
@@ -40,7 +32,17 @@ $max-width: 600px;
     input[type="text"] {
       margin: 0;
       width: 100%;
-      padding-right: 4em;
+      height: 100%;
+      padding: 0.8em 1em 0.8em 3em;
+      border: none;
+      background: var(--vaperina-header-search);
+      border-radius: 25px;
+      transition: background .15s ease-out;
+      &:focus {
+        box-shadow: none;
+        background: var(--vaperina-header-search-focus);
+        transition: background .15s ease-out;
+      }
     }
   }
 
@@ -71,8 +73,8 @@ $max-width: 600px;
   .search-icon {
     position: absolute;
     z-index: 2;
-    order: 2;
-    right: 0;
+    top: 0.3em;
+    left: 0;
     background: transparent;
     .discourse-no-touch & {
       &:hover {
@@ -93,8 +95,8 @@ $max-width: 600px;
   .search-context {
     position: absolute;
     z-index: 10;
-    right: 0;
-    top: 2.67em;
+    right: 0.8em;
+    top: 0.8em;
     display: inline-flex;
     align-items: center;
     label {
