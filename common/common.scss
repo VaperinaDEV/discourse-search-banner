@@ -1,3 +1,5 @@
+$br: 1;
+
 .custom-search-banner-wrap {
   background: var(--secondary);
   border: 1px solid var(--primary-low);
@@ -5,7 +7,7 @@
   position: relative;
   padding: 1em 1em 1.8em 1em;
   margin: 0 auto 1em auto;
-  border-radius: 8px;
+  border-radius: #{$br}em;
 
   > div {
     margin: 0 auto;
@@ -95,7 +97,7 @@
     background: var(--secondary);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     border: 1px solid var(--primary-low);
-    border-radius: 8px;
+    border-radius: #{$br}em;
     position: absolute;
     width: 100%;
     z-index: 9;
@@ -120,7 +122,7 @@
   li a.widget-link {
     display: block;
     padding: 0.25em 0.5em;
-    border-radius: 8px;
+    border-radius: #{$br}em;
     &:hover,
     &:focus {
       background-color: var(--highlight-medium);
