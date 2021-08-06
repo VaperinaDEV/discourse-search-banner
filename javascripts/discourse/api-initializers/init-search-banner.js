@@ -37,10 +37,10 @@ export default apiInitializer("0.8", (api) => {
     },
     clickOutside() {
       if (!this.vnode.hooks["widget-mouse-down-outside"]) {
-        return this.mouseDownOutside();
+        return this.clickOutside();
       }
     },
-    mouseDownOutside() {
+    clickOutside() {
       const formFactor = this.state.formFactor;
       if (formFactor === "menu") {
         return this.sendWidgetAction("toggleSearchMenu");
