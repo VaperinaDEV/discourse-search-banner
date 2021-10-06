@@ -126,7 +126,7 @@ $br-px: 10;
     border-radius: #{$br-px}px;
     &:hover,
     &:focus {
-      background-color: var(--highlight-medium);
+      background-color: var(--highlight-low);
     }
   }
 }
