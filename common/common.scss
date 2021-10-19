@@ -36,6 +36,7 @@ $br-px: 10;
       border-radius: 2em;
       &:focus-within {
         outline: none;
+        border-radius: 2em;
       }
     }
   }
