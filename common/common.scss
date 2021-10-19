@@ -35,7 +35,7 @@ $br-px: 10;
     .search-input {
       border-radius: 2em;
       &:focus-within {
-        border-radius: 2em;
+        outline: none;
       }
     }
   }
