@@ -1,5 +1,4 @@
-$br-em: 1;
-$br-px: 10;
+$br-em: 1em;
 
 .custom-search-banner-wrap {
   background: var(--secondary);
@@ -10,7 +9,7 @@ $br-px: 10;
   position: relative;
   padding: 1em;
   margin: 0 auto 1em auto;
-  border-radius: #{$br-em}em;
+  border-radius: $br-em;
 
   > div {
     margin: 0 auto;
@@ -26,7 +25,7 @@ $br-px: 10;
       padding: 0.8em 1em 0.8em 2.5em;
       border: none;
       background: var(--vaperina-header-search);
-      border-radius: 2em;
+      border-radius: $br-em * 2;
       transition: background .15s ease-out;
       &:focus {
         box-shadow: none;
@@ -35,10 +34,10 @@ $br-px: 10;
       }
     }
     .search-input {
-      border-radius: 2em;
+      border-radius: $br-em * 2;
       &:focus-within {
         outline: none;
-        border-radius: 2em;
+        border-radius: $br-em * 2;
         box-shadow: 0px 0px 0px 1px var(--tertiary);
       }
     }
@@ -108,7 +107,7 @@ $br-px: 10;
     background: var(--secondary);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     border: 1px solid var(--primary-low);
-    border-radius: #{$br-em}em;
+    border-radius: $br-em;
     position: absolute;
     width: 100%;
     z-index: 9;
