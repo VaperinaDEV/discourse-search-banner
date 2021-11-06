@@ -3,7 +3,9 @@ import { apiInitializer } from "discourse/lib/api";
 export default apiInitializer("0.8", (api) => {
   const enableConnectorName = settings.plugin_outlet;
   const disableConnectorName =
-    enableConnectorName === "discovery-list-container-top";
+    enableConnectorName === "above-main-container"
+      ? "below-site-header"
+      : "above-main-container";
 
   api.registerConnectorClass(disableConnectorName, "search-banner", {
     shouldRender() {
@@ -33,12 +35,7 @@ export default apiInitializer("0.8", (api) => {
         return this._super(attrs, state);
       }
     },
-    clickOutside() {
-      if (!this.vnode.hooks["widget-mouse-down-outside"]) {
-        return this.mouseDownOutside();
-      }
-    },
-    clickOutside() {
+    mouseDownOutside() {
       const formFactor = this.state.formFactor;
       if (formFactor === "menu") {
         return this.sendWidgetAction("toggleSearchMenu");
