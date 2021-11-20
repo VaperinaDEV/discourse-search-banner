@@ -22,7 +22,7 @@ $br-em: 1em;
       margin: 0;
       width: 100%;
       height: 100%;
-      padding: 0.8em 1em 0.8em 2.5em;
+      padding: 0.8em 1em 0.8em 3em;
       border: none;
       background: var(--vaperina-header-search);
       border-radius: $br-em * 2;
@@ -67,18 +67,20 @@ $br-em: 1em;
   .search-icon {
     position: absolute;
     z-index: 2;
-    top: 0.25em;
-    left: 0;
-    background: transparent;
+    top: 2px;
+    left: 2px;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    background: var(--primary-medium);
     .d-icon {
-      width: 1.3em;
-      height: 1.3em;
+      color: var(--primary-low);
     }
     .discourse-no-touch & {
       &:hover {
-        background: transparent;
+        background: var(--primary-high);
         .d-icon {
-          color: var(--primary-high);
+          color: var(--primary-low);
         }
       }
     }
