@@ -1,9 +1,9 @@
-{{#unless site.mobileView}}  
-  {{#if shouldDisplay}}
+{{#if shouldDisplay}}  
+  {{#unless site.mobileView}}
     <div class="custom-search-banner" >
       <div class="wrap custom-search-banner-wrap">
         {{mount-widget widget="search-widget"}}
       </div>
     </div>
-  {{/if}}
-{{/unless}}
+  {{/unless}}
+{{/if}}
