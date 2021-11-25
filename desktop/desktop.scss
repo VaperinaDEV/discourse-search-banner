@@ -140,6 +140,7 @@ $br-em: 1em;
   li a.widget-link {
     display: block;
     padding: 0.25em 0.5em;
+    color: var(--primary);
     &:hover,
     &:focus {
       background-color: var(--highlight-low);
