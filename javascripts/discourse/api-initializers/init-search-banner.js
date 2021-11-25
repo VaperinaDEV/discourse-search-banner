@@ -1,6 +1,9 @@
 import { apiInitializer } from "discourse/lib/api";
 
 export default apiInitializer("0.8", (api) => {
+  if (Site.currentProp("mobileView")) {
+    return;
+  }
   const enableConnectorName = settings.plugin_outlet;
   const disableConnectorName =
     enableConnectorName === "discovery-list-container-top";
