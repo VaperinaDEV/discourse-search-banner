@@ -25,7 +25,7 @@ export default apiInitializer("0.8", (api) => {
     return result;
   }
   
-  if (!getVaperinaPanel()) {
+  if (getVaperinaPanel()) {
     api.registerConnectorClass("discovery-list-container-top", "search-banner", {
       shouldRender() {
         return false;
