@@ -15,23 +15,6 @@ export default apiInitializer("0.8", (api) => {
       return false;
     },
   });
-  
-  function getVaperinaPanel() {
-    let pref = localStorage.getItem("vaperinaPanel");
-    let result = settings.vaperina_panel;
-    if (pref !== null || pref === null) {
-      result = pref === "true";
-    }
-    return result;
-  }
-  
-  if (getVaperinaPanel()) {
-    api.registerConnectorClass("discovery-list-container-top", "search-banner", {
-      shouldRender() {
-        return false;
-      }
-    });
-  }
 
   // Simplified version of header search theme component
   const searchMenuWidget = api.container.factoryFor("widget:search-menu");
